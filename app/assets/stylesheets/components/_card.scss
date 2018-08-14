@@ -1,3 +1,10 @@
+.profile h3{
+  margin: 5px 0px;
+}
+.profile h4{
+  margin-top: 0px;
+  margin-bottom: 5px;
+}
 .card {
   height: 175px;
   text-shadow: 0 1px 3px rgba(0,0,0,0.6);
@@ -5,6 +12,7 @@
   background-position: center;
   color: white;
   position: relative;
+  border-radius: 2%;
 }
 .card-user {
   position: absolute;
