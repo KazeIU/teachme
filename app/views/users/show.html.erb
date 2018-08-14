@@ -1,7 +1,8 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
-<h2>Teacher's Name</h2> <%= @user.first_name %><%= @user.last_name %>
-<br>
-<%= link_to "Edit Profile", edit_user_registration_path %>
-<%= link_to "Create Lesson", new_lesson_path %>
+
+<h1>Users</h1>
+<h3>Teacher's Name: </h3>
+<h3><%= @user.first_name %>  <%= @user.last_name %></h3>
+<br />
+<%= link_to "Create Lesson", new_lesson_path, class: "btn btn-danger" %>
+
 

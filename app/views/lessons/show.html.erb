@@ -1,7 +1,8 @@
-<h1>Lessons#show</h1>
-<p>Find me in app/views/lessons/show.html.erb</p>
-<%= @lesson.language %>
-<%= @lesson.duration %>
-<%= @lesson.price %>
+<h1>Lessons</h1>
 
-<%= link_to "Create Lesson", new_lesson_path %>
+<h2>Language: <%= @lesson.language %></h2>
+<h2>Duration: <%= @lesson.duration %></h2>
+<h2>Price: <%= @lesson.price %></h2>
+
+<br />
+<%= link_to "Home", root_path, class: "btn btn-primary" %>
