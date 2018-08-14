@@ -15,3 +15,14 @@
     <% end %>
   </div>
 </div>
+
+<table>
+<% @lessons.each do |l| %>
+<tr>
+<td><%= l.language %>&nbsp;</td>
+<td><%= l.duration %>&nbsp;</td>
+<td><%= l.price %></td>
+</tr>
+<% end %>
+</table>
+
