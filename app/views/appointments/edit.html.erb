@@ -1,0 +1,7 @@
+<h1>Appointments#edit</h1>
+<p>Find me in app/views/appointments/edit.html.erb</p>
+<%= simple_form_for(@appointment) do |f| %>
+  <%= f.input :start_time, as: :datetime%>
+  <%= f.input :location %>
+  <%= f.submit "Submit", class: "btn btn-primary" %>
+<% end %>
