@@ -5,30 +5,38 @@
       <a class="btn btn-primary btn-lg">Search now</a>
     </div>
   </div>
+
+
 <div class="container">
-  <div class="title text-center">
-    <h2> Lesson Lists</h2>
+  <div class="title" style= "text-align: center">
+  <h2>Lesson Lists</h2>
   </div>
 
-  <div class="row">
-    <% @lessons.each do |l| %>
+  <div class="all-lesson-lists">
+    <div class="lesson-list">
+      <% @lessons.each do |l| %>
 
-      <div class="col-xs-12 col-sm-6 col-md-3">
-        <div style= "margin: 10px 0px">
-          <%= link_to lesson_path(l) do%>
-          <div class="card"  style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://images.unsplash.com/photo-1525944167759-8a88897a1920?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=9760d0c36d8bad9bb97b77354e542c66&auto=format&fit=crop&w=2099&q=80');">
-            <tr>
-            <td><%= l.language %>&nbsp;</td>
-            <td><%= l.duration %>&nbsp;</td>
-            <td><%= l.price %></td>
+        <div class="col-xs-12 col-sm-6 col-md-3">
+          <div style= "margin: 10px 0px">
+            <%= link_to lesson_path(l) do%>
+            <div class="card"  style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://images.unsplash.com/photo-1525944167759-8a88897a1920?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=9760d0c36d8bad9bb97b77354e542c66&auto=format&fit=crop&w=2099&q=80');">
 
-            </tr>
 
+
+
+            </div>
+            <% end %>
+            <div class="profile">
+              <h3><%= l.user.first_name %></h3>
+              <h4><%= l.language %>&nbsp;</h4>
+              <p> <%= l.duration %><i class="far fa-clock"></i>  &nbsp;
+              ¥<%= l.price %></p>
+
+            </div>
           </div>
-          <% end %>
         </div>
-      </div>
-    <% end %>
+      <% end %>
+    </div>
   </div>
 </div>
 
