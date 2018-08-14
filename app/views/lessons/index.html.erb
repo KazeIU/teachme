@@ -1,6 +1,21 @@
 <h1>Lessons#index</h1>
 <p>Find me in app/views/lessons/index.html.erb</p>
 
+<div class="container">
+  <div class="row">
+<% @lessons.each do |lesson| %>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://images.unsplash.com/photo-1525944167759-8a88897a1920?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=9760d0c36d8bad9bb97b77354e542c66&auto=format&fit=crop&w=2099&q=80');">
+          <div class="card-description">
+            <h2><%= lesson.name %></h2>
+          </div>
+          <%= link_to "", lesson_path(lesson), class: 'card-link' %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
 <table>
 <% @lessons.each do |l| %>
 <tr>
@@ -10,3 +25,4 @@
 </tr>
 <% end %>
 </table>
+
