@@ -1,2 +1,12 @@
 <h1>Lessons#index</h1>
 <p>Find me in app/views/lessons/index.html.erb</p>
+
+<table>
+<% @lessons.each do |l| %>
+<tr>
+<td><%= l.language %>&nbsp;</td>
+<td><%= l.duration %>&nbsp;</td>
+<td><%= l.price %></td>
+</tr>
+<% end %>
+</table>
