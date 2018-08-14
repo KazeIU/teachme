@@ -20,7 +20,8 @@ class AppointmentsController < ApplicationController
     @appointment.lesson = @lesson
 
     if @appointment.save
-      redirect_to lesson_path(@lesson)
+      redirect_to appointment_path(@appointment)
+      flash[:notice]="appointment created!"
     else
       render :new
     end
