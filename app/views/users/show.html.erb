@@ -2,5 +2,6 @@
 <p>Find me in app/views/users/show.html.erb</p>
 <h2>Teacher's Name</h2> <%= @user.first_name %><%= @user.last_name %>
 <br>
+<%= link_to "Edit Profile", edit_user_registration_path %>
 <%= link_to "Create Lesson", new_lesson_path %>
 
