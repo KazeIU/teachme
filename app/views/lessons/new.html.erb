@@ -1,13 +1,19 @@
-<h1>Lessons#new</h1>
-<p>Find me in app/views/lessons/new.html.erb</p>
 
-<%= simple_form_for @lesson do |f| %>
-  <%= f.input :language, collection: ["English", "Japanese", "French"] %>
-  <%= f.input :level, collection:  ["Novice", "Conversational", "Business", "Fluent"] %>
-  <%= f.input :duration, collection: [40, 60, 90]%>
-  <%= f.input :price %>
-  <%= f.input :description %>
-  <%= f.submit "Submit", class: "btn btn-primary" %>
-<% end %>
+<div class="container">
+  <div class="row">
+    <div class="align-center">
+      <h1>Create Lessons</h1>
+      <%= simple_form_for @lesson do |f| %>
+        <%= f.input :language, collection: ["English", "Japanese", "French"] %>
+        <%= f.input :level, collection:  ["Novice", "Conversational", "Business", "Fluent"] %>
+        <%= f.input :duration, collection: [40, 60, 90]%>
+        <%= f.input :price %>
+        <%= f.input :description %>
+        <%= f.submit "Submit", class: "btn btn-danger" %>
+      <% end %>
+    </div>
+    <br />
+    <%= link_to "Home", root_path, class: "btn btn-primary" %>
+  </div>
+</div>
 
-<%= link_to "Home", root_path %>
