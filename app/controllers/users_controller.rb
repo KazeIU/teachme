@@ -1,11 +1,17 @@
 class UsersController < ApplicationController
 
+
   # def index
   #   @users = User.all
   # end
 
   def show
-    find_user
+
+    if user_signed_in?
+    @user = current_user
+    else
+      redirect_to root_path
+    end
   end
 
   # def edit
@@ -23,9 +29,9 @@ class UsersController < ApplicationController
   #   params.require(:user).permit(:first_name, :last_name, :email, :password, :photo)
   # end
 
-  def find_user
-    @user = current_user
+  # def find_user
+  #   @user = current_user
     # @usser = User.find(params[])
-  end
+  # end
 
 end
