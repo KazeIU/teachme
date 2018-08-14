@@ -2,4 +2,7 @@
 <p>Find me in app/views/appointments/show.html.erb</p>
 <%=  %>
 
-<%= link_to "edit", edit_appointment_path(@appointment) %>
+<%= link_to "Edit", edit_appointment_path(@appointment) %>
+<%= link_to appointment_path(@appointment), method: :delete, data: { confirm: "Are you sure?" } do %>
+<i class="fa fa-trash destroy_dose">Delete</i>
+<% end %>

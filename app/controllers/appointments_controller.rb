@@ -40,7 +40,10 @@ class AppointmentsController < ApplicationController
     end
   end
 
-  def delete
+  def destroy
+    @appointment = Appointment.find(params[:id])
+    @appointment.destroy
+    redirect_to lessons_path
   end
 
   private
