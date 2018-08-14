@@ -1,0 +1,12 @@
+<h1>Appointments#new</h1>
+<p>Find me in app/views/appointments/new.html.erb</p>
+<%= simple_form_for [@lesson, @appointment] do |f| %>
+  <%= f.input :start_time, as: :datetime%>
+  <%= f.input :location %>
+  <%= f.submit "Submit", class: "btn btn-primary" %>
+
+<% end %>
+
+
+
+<%= link_to "@@@", lesson_appointments_path %>
