@@ -1,9 +1,18 @@
-<h1>Lessons</h1>
+<div class="container">
+<div class="row">
+  <div class="col-md-4 col-md-offset-4">
+    <h1>Lessons</h1>
 
-<h2>Language: <%= @lesson.language %></h2>
-<h2>Duration: <%= @lesson.duration %></h2>
-<h2>Price: <%= @lesson.price %></h2>
+    <h2>Language: <%= @lesson.language %></h2>
+    <h2>Duration: <%= @lesson.duration %></h2>
+    <h2>Price: <%= @lesson.price %></h2>
 
-<br />
-<%= link_to "Book this lesson", new_lesson_appointment_path(@lesson), class: "btn btn-primary" %>
-<%= link_to "Home", root_path, class: "btn btn-primary" %>
+    <br />
+    <%= link_to "Book this lesson", new_lesson_appointment_path(@lesson), class: "btn btn-primary" %>
+    <%= link_to "Home", root_path, class: "btn btn-primary" %>
+
+    </div>
+
+  </div>
+</div>
+
