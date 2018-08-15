@@ -15,7 +15,7 @@ puts "Deleted all the past data"
 
 
 test_url = "https://kitt.lewagon.com/placeholder/users/takumamatata"
-test_user= User.new(email: "test@gmail.com", password: "123456", first_name: "John", last_name: "Doe")
+test_user= User.new(email: "test@gmail.com", password: "123456", first_name: "Takuma", last_name: "Naruke")
 test_user.remote_photo_url = test_url
 test_user.save
 
