@@ -8,11 +8,12 @@
     <h2>Price: <%= @lesson.price %> yen</h2>
 
     <br />
+    <% if @lesson.user != current_user  %>
     <%= link_to "Book this lesson", new_lesson_appointment_path(@lesson), class: "btn btn-danger" %>
+    <% end  %>
     <%= link_to "Home", root_path, class: "btn btn-primary" %>
 
     </div>
 
   </div>
 </div>
-
