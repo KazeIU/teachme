@@ -19,7 +19,7 @@
         <div class="col-xs-12 col-sm-6 col-md-3">
           <div style= "margin: 10px 0px">
             <%= link_to lesson_path(l) do%>
-            <div class="card"  style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://images.unsplash.com/photo-1525944167759-8a88897a1920?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=9760d0c36d8bad9bb97b77354e542c66&auto=format&fit=crop&w=2099&q=80');">
+            <div class="card"  style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path l.user.photo, width:400, height: 500, crop: :fill %>');">
 
 
 

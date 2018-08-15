@@ -13,10 +13,17 @@ User.delete_all
 
 puts "Deleted all the past data"
 
-User.create(email: "test@gmail.com", password: "123456", first_name: "John", last_name: "Doe")
+
+test_url = "https://kitt.lewagon.com/placeholder/users/takumamatata"
+test_user= User.new(email: "test@gmail.com", password: "123456", first_name: "John", last_name: "Doe")
+test_user.remote_photo_url = test_url
+test_user.save
 
 10.times do
-  User.create(email: Faker::Internet.email, password: "123456", first_name: Faker::HarryPotter.character.split[0], last_name: Faker::HarryPotter.character.split[1])
+  url = "https://kitt.lewagon.com/placeholder/users/random"
+  user_new = User.new(email: Faker::Internet.email, password: "123456", first_name: Faker::HarryPotter.character.split[0], last_name: Faker::HarryPotter.character.split[1])
+  user_new.remote_photo_url = url
+  user_new.save
 end
 puts "Created #{User.count} users"
 
