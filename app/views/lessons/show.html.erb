@@ -4,11 +4,11 @@
     <h1>Lessons</h1>
 
     <h2>Language: <%= @lesson.language %></h2>
-    <h2>Duration: <%= @lesson.duration %></h2>
-    <h2>Price: <%= @lesson.price %></h2>
+    <h2>Duration: <%= @lesson.duration %> minutes</h2>
+    <h2>Price: <%= @lesson.price %> yen</h2>
 
     <br />
-    <%= link_to "Book this lesson", new_lesson_appointment_path(@lesson), class: "btn btn-primary" %>
+    <%= link_to "Book this lesson", new_lesson_appointment_path(@lesson), class: "btn btn-danger" %>
     <%= link_to "Home", root_path, class: "btn btn-primary" %>
 
     </div>
