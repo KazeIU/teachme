@@ -1,15 +1,23 @@
-<h1>Appointments#index</h1>
-<p>Find me in app/views/appointments/index.html.erb</p>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div class="col-md-4 col-md-offset-4">
+        <h1>Appointments</h1>
+        <p>Find me in app/views/appointments/index.html.erb</p>
 
-<table>
-<% @appointments.each do |a| %>
-<tr>
-<td><%= a.lesson.language %>&nbsp;</td>
-<td><%= a.lesson.duration %>&nbsp;</td>
-<td><%= a.lesson.price %>&nbsp;</td>
-<td><%= a.start_time %>&nbsp;</td>
-<td><%= a.location %>&nbsp;</td>
+        <table>
+        <% @appointments.each do |a| %>
+        <tr>
+        <td><%= a.lesson.language %>&nbsp;</td>
+        <td><%= a.lesson.duration %>&nbsp;</td>
+        <td><%= a.lesson.price %>&nbsp;</td>
+        <td><%= a.start_time %>&nbsp;</td>
+        <td><%= a.location %>&nbsp;</td>
 
-</tr>
-<% end %>
-</table>
+        </tr>
+        <% end %>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
