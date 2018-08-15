@@ -1,12 +1,15 @@
-<h1>Appointments#new</h1>
-<p>Find me in app/views/appointments/new.html.erb</p>
-<%= simple_form_for [@lesson, @appointment] do |f| %>
-  <%= f.input :start_time, as: :datetime%>
-  <%= f.input :location %>
-  <%= f.submit "Submit", class: "btn btn-primary" %>
+<h1>Appointments</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 col-md-offset-4">
+      <%= simple_form_for [@lesson, @appointment] do |f| %>
+        <%= f.input :start_time, as: :datetime%>
+        <%= f.input :location %>
+        <%= f.submit "Submit", class: "btn btn-primary" %>
+        <%= link_to "Appointment List", lesson_appointments_path, class: "btn btn-danger" %>
 
-<% end %>
+      <% end %>
+    </div>
+  </div>
+</div>
 
-
-
-<%= link_to "@@@", lesson_appointments_path %>

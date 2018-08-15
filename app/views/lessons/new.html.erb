@@ -1,7 +1,7 @@
 
 <div class="container">
   <div class="row">
-    <div class="align-center">
+    <div class="col-md-4 col-md-offset-4">
       <h1>Create Lessons</h1>
       <%= simple_form_for @lesson do |f| %>
         <%= f.input :language, collection: ["English", "Japanese", "French"] %>
@@ -9,11 +9,11 @@
         <%= f.input :duration, collection: [40, 60, 90]%>
         <%= f.input :price %>
         <%= f.input :description %>
-          <%= f.submit "Submit", id: "sweet-alert-demo", class: "btn btn-primary", data: { confirm: " Are you sure?"}%>
+         <%= f.submit "Submit", id: "sweet-alert-demo", class: "btn btn-primary", data: { confirm: " Are you sure?"}%>
+        <%= f.submit "Submit", class: "btn btn-danger" %>
+        <%= link_to "Home", root_path, class: "btn btn-primary" %>
       <% end %>
     </div>
-    <br />
-    <%= link_to "Home", root_path, class: "btn btn-primary" %>
   </div>
 </div>
 
