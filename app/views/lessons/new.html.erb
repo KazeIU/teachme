@@ -9,7 +9,7 @@
         <%= f.input :duration, collection: [40, 60, 90]%>
         <%= f.input :price %>
         <%= f.input :description %>
-        <%= f.submit "Submit", class: "btn btn-danger" %>
+          <%= f.submit "Submit", id: "sweet-alert-demo", class: "btn btn-primary", data: { confirm: " Are you sure?"}%>
       <% end %>
     </div>
     <br />

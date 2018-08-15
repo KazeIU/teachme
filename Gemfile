@@ -20,6 +20,10 @@ gem 'devise'
 
 gem 'faker'
 
+gem 'jquery-rails'
+gem 'rails-assets-sweetalert2', '~> 5.1.1', source: 'https://rails-assets.org'
+gem 'sweet-alert2-rails'
+
 group :development do
   gem 'web-console', '>= 3.3.0'
 end
