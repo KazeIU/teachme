@@ -1,7 +1,15 @@
-<h1>Appointments#edit</h1>
-<p>Find me in app/views/appointments/edit.html.erb</p>
-<%= simple_form_for(@appointment) do |f| %>
-  <%= f.input :start_time, as: :datetime%>
-  <%= f.input :location %>
-  <%= f.submit "Submit", class: "btn btn-primary" %>
-<% end %>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div class="col-md-4 col-md-offset-4">
+        <h1>Appointments</h1>
+        <%= simple_form_for(@appointment) do |f| %>
+          <%= f.input :start_time, as: :datetime%>
+          <%= f.input :location %>
+          <%= f.submit "Submit", class: "btn btn-primary" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
