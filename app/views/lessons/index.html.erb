@@ -1,3 +1,4 @@
+<div class="homepage">
   <div class="banner" style="background-image: url('https://images.pexels.com/photos/159621/open-book-library-education-read-159621.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');">
     <div class="banner-content">
       <h1>Teach Me</h1>
@@ -12,41 +13,33 @@
       <!-- <input name='Serch' type='submit' value='Serch' data-confirm="Are you sure?" /> -->
       <% end %>
     </div>
-
   </div>
-
+</div>
 
 <div class="container" style= "margin-top: 5px">
   <div class="title" style= "text-align: center">
-  <h2>Lesson Lists</h2>
+    <h2>Lesson Lists</h2>
   </div>
-
   <div class="all-lesson-lists">
     <div class="lesson-list">
       <% @lessons.each do |l| %>
-
-        <div class="col-xs-12 col-sm-6 col-md-3">
-          <div style= "margin: 10px 0px">
-            <%= link_to lesson_path(l) do%>
+        <div class="col-xs-12 col-sm-6 col-md-3" style= "margin: 10px 0px">
+          <%= link_to lesson_path(l) do%>
             <div class="card"  style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path l.user.photo, width:400, height: 500, crop: :fill %>');">
-
-
-
-
             </div>
-            <% end %>
-            <div class="profile">
-              <h3><%= l.user.first_name %></h3>
-              <h4><%= l.language %>&nbsp;</h4>
-              <p> <%= l.duration %><i class="far fa-clock"></i>  &nbsp;
-              ¥<%= l.price %></p>
-
-            </div>
+          <% end %>
+          <div class="profile">
+            <h3><%= l.user.first_name %></h3>
+            <h4><%= l.language %>&nbsp;</h4>
+            <p> <%= l.duration %><i class="far fa-clock"></i>  &nbsp;
+            ¥<%= l.price %></p>
           </div>
         </div>
       <% end %>
     </div>
   </div>
 </div>
+</div>
+
 
 
