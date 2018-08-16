@@ -12,6 +12,10 @@ class LessonsController < ApplicationController
 
   def show
     find_lesson
+    @markers = {
+        lat: @lesson.latitude,
+        lng: @lesson.longitude
+    }
   end
 
   def new
