@@ -7,6 +7,7 @@ class Lesson < ApplicationRecord
     }
 
   belongs_to :user
+  has_many :appointments
   validates :language, inclusion: { in: ["English", "Japanese", "French"]}
   validates :level, inclusion: { in: ["Novice", "Conversational", "Business", "Fluent"]}
   validates :price, presence: true, numericality: { only_integer: true }

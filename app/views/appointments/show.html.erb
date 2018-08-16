@@ -4,12 +4,11 @@
       <h2>Appointment details</h1>
       <h3>Date: <%= @appointment.start_time %></h2>
       <h3><i class="far fa-clock"></i><%= @appointment.lesson.duration %>minutes</h2>
-      <h3>Location: <%= @appointment.location %></h2>
+      <h3>Location: <%= @appointment.lesson.location %></h2>
       <h3>Language: <%= @appointment.lesson.language %></h2>
       <h3>Price: <%= @appointment.lesson.price %>yen</h2>
       <h3>Teacher: <%= @appointment.lesson.user.first_name %>  <%= @appointment.lesson.user.last_name %></h2>
       <h3> <%= cl_image_tag @appointment.lesson.user.photo, height: 300, width: 400, crop: :fill %></h2>
-
       <%= link_to "Home", root_path, class: "btn btn-primary" %>
       <%= link_to "Edit appointment", edit_appointment_path(@appointment), class: "btn btn-primary" %>
       <%= link_to appointment_path(@appointment), method: :delete, data: { confirm: "Are you sure?" } do %>
