@@ -1,21 +1,12 @@
-<div class="container">
-<div class="row">
-  <div class="col-md-4 col-md-offset-4">
-    <h1>Lessons</h1>
-<h2>Teacher: <%= @lesson.user.first_name %></h2>
-<%= cl_image_tag @lesson.user.photo, height: 300, width: 400, crop: :fill %>
-<h2>Language: <%= @lesson.language %></h2>
-<h2><i class="far fa-clock"></i><%= @lesson.duration %>minutes</h2>
-<h2><%= @lesson.price %>yen</h2>
-
-
-    <br />
-    <% if @lesson.user != current_user  %>
-    <%= link_to "Book this lesson", new_lesson_appointment_path(@lesson), class: "btn btn-danger" %>
-    <% end  %>
-    <%= link_to "Home", root_path, class: "btn btn-primary" %>
-
-    </div>
-
-  </div>
+<div class="lessons-show">
+  <h1>Lessons</h1>
+  <h2>Teacher: <%= @lesson.user.first_name %></h2>
+  <%= cl_image_tag @lesson.user.photo, height: 300, width: 400, crop: :fill %>
+  <h2>Language: <%= @lesson.language %></h2>
+  <h2><i class="far fa-clock"></i><%= @lesson.duration %>minutes</h2>
+  <h2><%= @lesson.price %>yen</h2>
+  <% if @lesson.user != current_user  %>
+  <%= link_to "Book this lesson", new_lesson_appointment_path(@lesson), class: "btn btn-danger" %>
+  <% end  %>
+  <%= link_to "Home", root_path, class: "btn btn-primary" %>
 </div>

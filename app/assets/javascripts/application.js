@@ -7,6 +7,7 @@
 
 window.sweetAlertConfirmConfig = {
   type: 'warning',
+  text: 'hello there!!',
   showCancelButton: true,
   confirmButtonColor: '#50C978',
   confirmButtonText: 'Open class!'

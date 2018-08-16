@@ -13,7 +13,17 @@
   <body>
     <%= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
-    <%= yield %>
+    <% unless action_name == "index" %>
+      <div class="container">
+        <div class="row">
+          <div class="col-sx-12 col-sm-6 col-sm-offset-3">
+            <%= yield %>
+          </div>
+        </div>
+      </div>
+    <% else %>
+      <%= yield %>
+    <% end %>
     <%= render 'shared/footer' %>
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
