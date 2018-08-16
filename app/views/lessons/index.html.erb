@@ -2,8 +2,17 @@
     <div class="banner-content">
       <h1>Teach Me</h1>
       <p>Find your perfect lesson</p>
-      <a class="btn btn-primary btn-lg">Search now</a>
+
+      <%= form_tag lessons_path, method: :get do %>
+        <%= text_field_tag :query, params[:query],
+        class: "form-control",placeholder: "Search by language or location!"
+        %>
+        <br>
+        <%= button_tag "Search", type: "submit", class: "btn btn-primary" %>
+      <!-- <input name='Serch' type='submit' value='Serch' data-confirm="Are you sure?" /> -->
+      <% end %>
     </div>
+
   </div>
 
 
