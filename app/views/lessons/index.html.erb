@@ -5,7 +5,7 @@
       <p>Find your perfect lesson</p>
       <div class="form-inline">
       <%= form_tag lessons_path, method: :get do %>
-      <%= text_field_tag :query, params[:query], size: 80, class: "form-control", placeholder: "Search by language or location!"%>
+      <%= text_field_tag :query, params[:query], size: 50, class: "form-control", placeholder: "Search by language or location!"%>
       <%= button_tag "Search", type: "submit", class: "btn btn-primary" %>
       </div>
       <!-- <input name='Serch' type='submit' value='Serch' data-confirm="Are you sure?" /> -->
