@@ -3,6 +3,7 @@ class LessonsController < ApplicationController
 
   def index
     @lessons = Lesson.all
+    authorize @lessons
   end
 
   def show
@@ -11,11 +12,13 @@ class LessonsController < ApplicationController
 
   def new
     @lesson = Lesson.new
+    authorize @lesson
   end
 
   def create
     @lesson = Lesson.new(lesson_params)
     @lesson.user = current_user
+    authorize @lesson
 
     if @lesson.save
       redirect_to lesson_path(@lesson)
@@ -41,6 +44,7 @@ class LessonsController < ApplicationController
   private
   def find_lesson
     @lesson = Lesson.find(params[:id])
+    authorize @lesson
   end
 
   def lesson_params
