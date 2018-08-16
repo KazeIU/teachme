@@ -14,13 +14,15 @@ User.delete_all
 puts "Deleted all the past data"
 
 
-test_url = "https://kitt.lewagon.com/placeholder/users/takumamatata"
+test_url = "https://www.facebook.com/photo.php?fbid=1115557441848927&set=a.106039766134038.9772.100001840462856&type=3&theater"
+# test_url = "https://kitt.lewagon.com/placeholder/users/takumamatata"
 test_user= User.new(email: "test@gmail.com", password: "123456", first_name: "Takuma", last_name: "Naruke")
 test_user.remote_photo_url = test_url
 test_user.save
 
 10.times do
-  url = "https://kitt.lewagon.com/placeholder/users/random"
+  url = "https://www.facebook.com/photo.php?fbid=1115557441848927&set=a.106039766134038.9772.100001840462856&type=3&theater"
+  # url = "https://kitt.lewagon.com/placeholder/users/random"
   user_new = User.new(email: Faker::Internet.email, password: "123456", first_name: Faker::HarryPotter.character.split[0], last_name: Faker::HarryPotter.character.split[1])
   user_new.remote_photo_url = url
   user_new.save
@@ -29,11 +31,12 @@ puts "Created #{User.count} users"
 
 languages = ["English", "Japanese", "French"]
 level = ["Novice", "Conversational", "Business", "Fluent"]
+location = ["Meguro, Tokyo", "Shibuya, Tokyo", "Yokohama, Kanagawa"]
 duration = [40, 60, 90]
 price = [2000, 3000, 5000]
 
 30.times do
-  Lesson.create(language: languages.sample, user_id: User.all.sample.id, duration: duration.sample, price: price.sample, level: level.sample)
+  Lesson.create(language: languages.sample, user_id: User.all.sample.id, duration: duration.sample, price: price.sample, level: level.sample, location: location.sample)
 end
 
 puts "Created #{Lesson.count} lessons"
