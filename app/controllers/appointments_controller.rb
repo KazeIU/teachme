@@ -2,7 +2,8 @@ class AppointmentsController < ApplicationController
   before_action :set_appointment, only: [:show, :edit, :update, :destroy]
 
   def index
-    @appointments = Appointment.all
+    @lesson = Lesson.find(params[:lesson_id])
+    @appointments = @lesson.appointments
     authorize @appointments
   end
 

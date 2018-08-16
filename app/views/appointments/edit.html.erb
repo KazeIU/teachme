@@ -5,7 +5,6 @@
         <h1>Appointments</h1>
         <%= simple_form_for(@appointment) do |f| %>
           <%= f.input :start_time, as: :datetime%>
-          <%= f.input :location %>
           <%= f.submit "Submit", class: "btn btn-primary" %>
         <% end %>
       </div>

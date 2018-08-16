@@ -1,0 +1,34 @@
+<h3>Appointments as a teacher </h3>
+<table>
+<% @appointments.each do |a| %>
+<% if a.lesson.user == current_user %>
+<tr>
+<td><%= a.lesson.language %>&nbsp;</td>
+<td><%= a.lesson.duration %>min.&nbsp;</td>
+<td><%= a.lesson.price %>yen&nbsp;</td>
+<td><%= a.start_time.strftime("at %I:%M%p %m/%d/%Y") %>&nbsp;</td>
+<td><%= a.lesson.location %>&nbsp;</td>
+<td>Student's name:</td>
+<td><%= a.user.first_name %>&nbsp;</td>
+<td><%= a.user.last_name %>&nbsp;</td>
+</tr>
+<% end %>
+<% end %>
+</table>
+<h3>Appointments as a student </h3>
+<table>
+<% @appointments.each do |a| %>
+<% if a.user == current_user %>
+<tr>
+<td><%= a.lesson.language %>&nbsp;</td>
+<td><%= a.lesson.duration %>min.&nbsp;</td>
+<td><%= a.lesson.price %>yen&nbsp;</td>
+<td><%= a.start_time.strftime("at %I:%M%p %m/%d/%Y") %>&nbsp;</td>
+<td><%= a.lesson.location %>&nbsp;</td>
+<td>Teacher's name:</td>
+<td><%= a.lesson.user.first_name %>&nbsp;</td>
+<td><%= a.lesson.user.last_name %>&nbsp;</td>
+</tr>
+<% end %>
+<% end %>
+</table>
