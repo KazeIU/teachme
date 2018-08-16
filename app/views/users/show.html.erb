@@ -1,17 +1,10 @@
-
-<div class="container">
-  <div class="profile text-center">
-    <div class="main">
-      <div class="main-content">
+<div class="profile">
         <%= cl_image_tag @user.photo, crop: :fill, class: "user-profile"%>
-
              <h3><%= @user.first_name %>  <%= @user.last_name %></h3>
              <h3><%= @user.email %></h3>
                <%= link_to "Edit profile", edit_user_registration_path, class: "btn btn-success" %>
              <%= link_to "Create Lesson", new_lesson_path, class: "btn btn-danger" %>
         </div>
-      </div>
-    </div>
-  </div>
+</div>
 
 <%= render 'appointments' %>
