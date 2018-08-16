@@ -2,11 +2,11 @@ class LessonsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
-    if params[:query].empty?
+    # if params[:query].empty?
       @lessons = Lesson.all
-    else
-      @lessons = Lesson.search_by_location_and_language(params[:query])
-    end
+    # else
+    #   @lessons = Lesson.search_by_location_and_language(params[:query])
+    # end
     authorize @lessons
   end
 
