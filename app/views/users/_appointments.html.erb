@@ -1,34 +1,75 @@
-<h3>Appointments as a teacher </h3>
-<table>
-<% @appointments.each do |a| %>
-<% if a.lesson.user == current_user %>
-<tr>
-<td><%= a.lesson.language %>&nbsp;</td>
-<td><%= a.lesson.duration %>min.&nbsp;</td>
-<td><%= a.lesson.price %>yen&nbsp;</td>
-<td><%= a.start_time.strftime("at %I:%M%p %m/%d/%Y") %>&nbsp;</td>
-<td><%= a.lesson.location %>&nbsp;</td>
-<td>Student's name:</td>
-<td><%= a.user.first_name %>&nbsp;</td>
-<td><%= a.user.last_name %>&nbsp;</td>
-</tr>
-<% end %>
-<% end %>
-</table>
-<h3>Appointments as a student </h3>
-<table>
-<% @appointments.each do |a| %>
-<% if a.user == current_user %>
-<tr>
-<td><%= a.lesson.language %>&nbsp;</td>
-<td><%= a.lesson.duration %>min.&nbsp;</td>
-<td><%= a.lesson.price %>yen&nbsp;</td>
-<td><%= a.start_time.strftime("at %I:%M%p %m/%d/%Y") %>&nbsp;</td>
-<td><%= a.lesson.location %>&nbsp;</td>
-<td>Teacher's name:</td>
-<td><%= a.lesson.user.first_name %>&nbsp;</td>
-<td><%= a.lesson.user.last_name %>&nbsp;</td>
-</tr>
-<% end %>
-<% end %>
-</table>
+<div class="teaching-day-lists">
+  <div class="title">
+    <h2>upcoming teaching day</h2>
+  </div>
+  <ul>
+    <% @appointments.each do |a| %>
+      <% if a.lesson.user == current_user %>
+        <li><%= a.lesson.language %></li>
+        <li><%= a.lesson.duration %>min.</li>
+        <li><%= a.lesson.price %>yen</li>
+        <li><%= a.start_time.strftime("at %I:%M%p %m/%d/%Y") %></li>
+        <li><%= a.lesson.location %></li>
+        <li>Student's name:</li>
+        <li><%= a.user.first_name %></li>
+        <li><%= a.user.last_name %></li>
+      <% end %>
+    <% end %>
+  </ul>
+</div>
+
+<div class="student-day-lists">
+  <div class="titile">
+    <h2>Appointments as a student </h2>
+  </div>
+  <ul>
+    <% @appointments.each do |a| %>
+      <% if a.user == current_user %>
+        <li><%= a.lesson.language %></li>
+        <li><%= a.lesson.duration %>min</li>
+        <li><%= a.lesson.price %>yen</li>
+        <li><%= a.start_time.strftime("at %I:%M%p %m/%d/%Y") %></li>
+        <li><%= a.lesson.location %></li>
+        <li>Teacher's name:</li>
+        <li><%= a.lesson.user.first_name %></li>
+        <li><%= a.lesson.user.last_name %></li>
+      <% end %>
+    <% end %>
+  </ul>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
