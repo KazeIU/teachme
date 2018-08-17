@@ -12,6 +12,11 @@ class LessonsController < ApplicationController
 
   def show
     find_lesson
+    @markers = [{
+        lat: @lesson.latitude,
+        lng: @lesson.longitude#,
+        # infoWindow: { content: render_to_string(partial: "/lessons/map_box", locals: { lesson: lesson }) }
+    }]
   end
 
   def new
