@@ -8,9 +8,10 @@ class UsersController < ApplicationController
   # end
 
   def show
-
     @user = current_user
-    @appointments = @user.appointments
+    @appointments = current_user.appointments
+    # @teaching_appointments = current_user.lessons.appointments
+    @teaching_appointments = current_user.lessons.map{ |lesson| lesson.appointments }.flatten
   end
 
   # def edit
