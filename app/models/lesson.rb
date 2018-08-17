@@ -12,4 +12,6 @@ class Lesson < ApplicationRecord
   validates :level, inclusion: { in: ["Novice", "Conversational", "Business", "Fluent"]}
   validates :price, presence: true, numericality: { only_integer: true }
   validates :duration, inclusion: {in: [40, 60, 90]}
+  geocoded_by :location
+  after_validation :geocode, if: :will_save_change_to_location?
 end
