@@ -1,6 +1,4 @@
-<div class="container">
-  <div class="row">
-    <div class="col-md-4 col-md-offset-4">
+
 <h1>Appointments</h1>
       <%= simple_form_for [@lesson, @appointment] do |f| %>
         <%= f.input :start_time, as: :datetime, minute_step: 15 %>
