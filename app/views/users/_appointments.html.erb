@@ -1,42 +1,44 @@
-<div class="teaching-day-lists">
-  <div class="title">
-    <h2>upcoming teaching day</h2>
-  </div>
-  <ul>
-    <% @appointments.each do |a| %>
-      <% if a.lesson.user == current_user %>
-        <li><%= a.lesson.language %></li>
-        <li><%= a.lesson.duration %>min.</li>
-        <li><%= a.lesson.price %>yen</li>
-        <li><%= a.start_time.strftime("at %I:%M%p %m/%d/%Y") %></li>
-        <li><%= a.lesson.location %></li>
-        <li>Student's name:</li>
-        <li><%= a.user.first_name %></li>
-        <li><%= a.user.last_name %></li>
+<div class="appointments">
+  <div class="teaching-day-lists">
+    <div class="title">
+      <h2>upcoming teaching day</h2>
+    </div>
+      <% @appointments.each do |a| %>
+        <ul>
+          <% if a.lesson.user == current_user %>
+            <li><%= a.lesson.language %></li>
+            <li><%= a.lesson.duration %>min.</li>
+            <li><%= a.lesson.price %>yen</li>
+            <li><%= a.start_time.strftime("%I:%M%p %m/%d") %></li>
+            <li><%= a.lesson.location %></li>
+            <li>Student's name:</li>
+            <li><%= a.user.first_name %></li>
+            <li><%= a.user.last_name %></li>
+        </ul>
       <% end %>
     <% end %>
-  </ul>
-</div>
+  </div>
 
-<div class="student-day-lists">
-  <div class="titile">
-    <h2>Appointments as a student </h2>
-  </div>
-  <ul>
-    <% @appointments.each do |a| %>
-      <% if a.user == current_user %>
-        <li><%= a.lesson.language %></li>
-        <li><%= a.lesson.duration %>min</li>
-        <li><%= a.lesson.price %>yen</li>
-        <li><%= a.start_time.strftime("at %I:%M%p %m/%d/%Y") %></li>
-        <li><%= a.lesson.location %></li>
-        <li>Teacher's name:</li>
-        <li><%= a.lesson.user.first_name %></li>
-        <li><%= a.lesson.user.last_name %></li>
+  <div class="student-day-lists">
+    <div class="titile">
+      <h2>Appointments as a student </h2>
+    </div>
+      <% @appointments.each do |a| %>
+        <% if a.user == current_user %>
+          <ul>
+            <li><%= a.lesson.language %></li>
+            <li><%= a.lesson.duration %>min</li>
+            <li><%= a.lesson.price %>yen</li>
+            <li><%= a.start_time.strftime("%I:%M%p %m/%d") %></li>
+            <li><%= a.lesson.location %></li>
+            <li>Teacher's name:</li>
+            <li><%= a.lesson.user.first_name %></li>
+            <li><%= a.lesson.user.last_name %></li>
+          </ul>
       <% end %>
     <% end %>
-  </ul>
-</ul>
+  </div>
+</div>
 
 
 
