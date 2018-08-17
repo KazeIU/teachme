@@ -1,6 +1,6 @@
 <div class="lessons-show">
   <h1>Lessons</h1>
-  <h2>Teacher: <%= @lesson.user.first_name %></h2>
+  <h2>Teacher: <%= @lesson.user.first_name %> <%= @lesson.user.last_name %></h2>
   <%= cl_image_tag @lesson.user.photo, height: 300, width: 400, crop: :fill %>
   <h2>Language: <%= @lesson.language %></h2>
   <h2><i class="far fa-clock"></i><%= @lesson.duration %>minutes</h2>
