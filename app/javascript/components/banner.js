@@ -19,7 +19,7 @@ import Typed from 'typed.js';
 
 function loadDynamicBannerText() {
   new Typed('#banner-typed-text', {
-    strings: ["Find you perfect lesson"],
+    strings: ["Find your perfect lesson"],
     typeSpeed: 40,
     loop: true
   });
