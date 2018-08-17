@@ -5,6 +5,7 @@
     <%= f.input :level, collection:  ["Novice", "Conversational", "Business", "Fluent"] %>
     <%= f.input :duration, collection: [40, 60, 90]%>
     <%= f.input :price %>
+    <%= f.input :location %>
     <%= f.input :description %>
      <%= f.submit "Submit", id: "sweet-alert-demo", class: "btn btn-primary", data: { confirm: " Are you sure?"}%>
     <%= link_to "Home", root_path, class: "btn btn-primary" %>

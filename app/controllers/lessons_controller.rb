@@ -57,7 +57,7 @@ class LessonsController < ApplicationController
   end
 
   def lesson_params
-    params.require(:lesson).permit(:language, :level, :description, :duration, :price)
+    params.require(:lesson).permit(:language, :level, :description, :duration, :price, :location)
   end
 end
 
